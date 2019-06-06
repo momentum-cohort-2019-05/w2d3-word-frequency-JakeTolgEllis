@@ -32,7 +32,7 @@ def print_word_freq(file):
         list_words.append(i)
         list_words.sort(key = word_count, reverse = True)
         for i in list_words:
-            print(i, (" ")*(9 - len(i)), "  |    ", count_data[i], ("*" * count_data))
+            print(i, (" ")*(9 - len(i)), "  |    ", count_data[i], ("*" * count_data[i]))
             if list_words.index(i) == 9:
                 break
 

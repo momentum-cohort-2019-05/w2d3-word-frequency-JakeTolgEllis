@@ -31,7 +31,6 @@ def print_word_freq(file):
     for i in count_data:
         list_words.append(i)
         list_words.sort(key = word_count, reverse = True)
-        list_words.remove(' ')
         for i in list_words:
             print(i, (" ")*(9 - len(i)), "  |    ", count_data[i], ("*" * count_data))
             if list_words.index(i) == 9:

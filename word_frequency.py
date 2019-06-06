@@ -22,17 +22,20 @@ def word_count(word):
 def print_word_freq(file):
     fullDoc = file.readlines()
     clean_text(fullDoc)
+    
     for i in word_list:
         if count_data.get(i) == None:
             count_data[i] = 1
         else:
             count_data[i] = count_data[i] + 1
     list_words= []
+    
     for i in count_data:
         list_words.append(i)
         list_words.sort(key = word_count, reverse = True)
-        for i in list_words:
-            print(i, (" ")*(9 - len(i)), "  |    ", count_data[i], ("*" * count_data[i]))
+
+    for i in list_words:
+            print(i, (" ")*(9 - len(i)), "  |    ", count_data[i], ("*" * count_data[i]))        
             if list_words.index(i) == 9:
                 break
 
